@@ -13,8 +13,10 @@ passw, username = get_login()
 insta = Instafollower()
 
 insta.login(uname=username, passw=passw)
-
-
+time.sleep(2)
+insta.kill_pop_up()
 time.sleep(3)
-
+insta.find_followers()
+time.sleep(2)
+insta.follow()
 insta.quit_web()
